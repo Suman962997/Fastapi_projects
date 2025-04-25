@@ -325,7 +325,7 @@ async def extract_document(file: UploadFile = File(...)):
     
     with open(temp_path, "wb" ) as f:
         f.write(content)
-
+ 
     try:
         if file.filename.endswith(".pdf" ):
             text = extract_text_from_pdf(temp_path)
